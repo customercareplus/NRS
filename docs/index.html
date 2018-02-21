@@ -1,7 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<title></title>
+		<link rel="stylesheet"
+		  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+		  integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+		  crossorigin="anonymous">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 	<body>
 		<style type="text/css">
@@ -10,54 +16,67 @@
 				justify-content: space-between;
 			}
 			img {
-				margin-top:50%; 
-				width:30vw;
+				/*margin:30px;*/
+				width: 100px;
+				height: 100px;
 
 			}
 			@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 			@import url('https://fonts.googleapis.com/css?family=Passion+One');
 			/*font-family: 'Passion One', cursive;*/
-
-
 			* {
-			  -webkit-box-sizing: border-box;
-			          box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
 			}
-
-			html {
-			  font-size: 62.5%;
-			}
-
 			body {
-			  background: #49C6E5;
-			  font-size: 2em;
-			  line-height: 1.5;
-			  font-weight: 300;
-			  color: white;
+			background: #49C6E5;
+			color: white;
 			}
-
 			h1 {
-			  font-family: 'Permanent Marker', cursive;
-			  font-weight: 400;
-			  text-align: center;
-			  font-size: 3em;
-			  color: #FFFFFF;
+			font-family: 'Permanent Marker', cursive;
+			font-weight: 400;
+			font-size: 1.5em;
+			color: #FFFFFF;
 			}
-
 		</style>
 		<div class="container">
-		  <h1>How did we do today?</h1>
+			<div class="row">
+				<div class="col-4"></div>
+				<div class="col-4">
+					<h1 class="text-center">How did we do today?</h1>
+					<img src="../cropped-cropped-Cookie-Riot-Logo.png">
+				</div>
+				<div class="col-4"></div>
+			</div>
+			<div class="row">
+				<div class="col-4">
+					<a href="https://www.example.com">
+						<img src="smile.svg" alt="happy face">
+					</a>
+				</div>
+				<div class="col-4">
+					<img id="showStuff" src="sceptic.svg" alt="neutral face">
+				</div>
+				<div class="col-4">
+					<img src="sad.svg" alt="sad face">
+				</div>	
+			</div>
+		<div id="test">
+			<div class="typeform-widget" data-url="https://cookieriot-feedback.typeform.com/to/fcK1JE" style="width: 100%; height: 500px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script> <div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;"> powered by <a href="https://admin.typeform.com/signup?utm_campaign=fcK1JE&utm_source=typeform.com-11787442-Basic&utm_medium=typeform&utm_content=typeform-embedded-poweredbytypeform&utm_term=EN" style="color: #999" target="_blank">Typeform</a> </div>
 		</div>
-		<div id="container">
-			<a href="https://www.example.com">
-				<img src="smile.svg" alt="happy face">
-			</a>
-			<a href="https://www.example.com">
-				<img src="sceptic.svg" alt="neutral face">
-			</a>
-			<a href="https://www.example.com">
-				<img src="sad.svg" alt="sad face">
-			</a>
-		</div>
+	</div>
 	</body>
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous">
+  	</script>
+	<script type="text/javascript">
+		$('#showStuff').click(function() {
+		  $("#test").addClass("animated infinite bounce")
+		});
+	
+
+	</script>
+
 </html>
