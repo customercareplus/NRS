@@ -27,12 +27,6 @@
 			background: #ABCAE9;
 			color: white;
 			}
-			/*h1 {
-			font-family: 'Permanent Marker', cursive;
-			font-weight: 400;
-			font-size: 1.5em;
-			color: #FFFFFF;
-			}*/
 		</style>
 		<div class="container firstscreen">
 			<div class="row">
@@ -42,25 +36,20 @@
 				</div>
 				<div class="col-4"></div>
 			</div>
-			<h2 class="text-center mt-3">How was your experience?</h2>
+			<h2 id="question" class="text-center mt-3">How was your experience?</h2>
 			<div class="row mt-3">
 				<div class="col-4">
-					
-						<a href="https://goo.gl/mwMmC2">
-					<img src="smile.svg" alt="happy face">
-					
+					<a id="reviewlink" href="">
+						<img src="smile.svg" alt="happy face">
 					</a>
 				</div>
 				<div class="col-4">
-					<a href="https://applegate-feedback.typeform.com/to/nExItR">
+					<a class="feedback" href="">
 					<img class="showTypeForm" src="sceptic.svg" alt="neutral face">
 				</div>
-				<div class="col-4">
-						
-						<a href="https://applegate-feedback.typeform.com/to/nExItR">
-						<img class="showTypeForm" src="sad.svg" alt="sad face">
-					
-						
+				<div class="col-4">					
+					<a class="feedback" href="">
+					<img class="showTypeForm" src="sad.svg" alt="sad face">
 				</div>	
 			</div>
 		</div>
@@ -78,7 +67,8 @@
 	  crossorigin="anonymous">
   	</script>
 	<script type="text/javascript">
-		$('.showTypeForm').click(function() {
+		$('.showTypeForm').click(function(e) {
+			e.preventDefault();
 		  	$('.firstscreen').addClass("animated slideOutUp")
 		  				   .delay(270)
 		  				   .queue(function() {
@@ -92,6 +82,15 @@
 	                       $(this).dequeue();
 	                   });
 		});
+		function getURLParameter(name) {
+			return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+		}
+		var question = getURLParameter('question');
+		var link = getURLParameter('reviewlink');
+		var feedback = getURLParameter('feedback');
 
+		$(".feedback").attr("href", feedback)
+		$("#reviewlink").attr("href", link)
+		$("#question").html(question);
 	</script>
 </html>
