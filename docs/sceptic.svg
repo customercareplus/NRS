@@ -5,8 +5,8 @@
 	 viewBox="0 0 42 42" style="enable-background:new 0 0 42 42;" xml:space="preserve">
 <g>
 	<circle style="fill:#FBD971;" cx="21" cy="21" r="21"/>
-	<circle style="fill:#AF8066;" cx="12.5" cy="13.5" r="3.5"/>
-	<circle style="fill:#AF8066;" cx="28.5" cy="13.5" r="3.5"/>
+	<circle style="fill:#F0C419;" cx="12.5" cy="13.5" r="3.5"/>
+	<circle style="fill:#F0C419;" cx="28.5" cy="13.5" r="3.5"/>
 	<path style="fill:#F0C419;" d="M32,30H10c-0.553,0-1-0.448-1-1s0.447-1,1-1h22c0.553,0,1,0.448,1,1S32.553,30,32,30z"/>
 </g>
 <g>
